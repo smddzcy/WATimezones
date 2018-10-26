@@ -145,7 +145,7 @@ chrome.extension.sendMessage({}, function (response) {
 	const readyStateCheckInterval = setInterval(function () {
 		if (document.readyState === "complete") {
 			clearInterval(readyStateCheckInterval);
-			const updateChatsInterval = setInterval(() => Chats.updateChats(), 1000);
+			const updateChatsInterval = setInterval(Chats.updateChats, 1000);
 		}
 	}, 10);
 });
